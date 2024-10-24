@@ -1,258 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            http-equiv="Content-Security-Policy"
-            content="default-src 'self'"
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+    <link rel="stylesheet" href="css/flashcard.css" id="base-stylesheet" />
+    <!-- <link rel="stylesheet" href="css/fade.css" /> -->
+    <title></title>
+  </head>
+  <body>
+    <a class="btn" id="back-btn">
+      <svg
+        width="24px"
+        height="24px"
+        viewBox="0 0 24 24"
+        version="1.2"
+        baseProfile="tiny"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M14.414 5.586c-.78-.781-2.048-.781-2.828 0l-6.415 6.414 6.415 6.414c.39.391.902.586 1.414.586s1.024-.195 1.414-.586c.781-.781.781-2.047 0-2.828l-3.585-3.586 3.585-3.586c.781-.781.781-2.047 0-2.828z"
         />
-        <link rel="stylesheet" href="css/flashcard.css" id="base-stylesheet" />
-        <!-- <link rel="stylesheet" href="css/fade.css" /> -->
-        <title></title>
-    </head>
-    <body>
-        <a class="btn" id="back-btn">
-            <svg
-                width="24px"
-                height="24px"
-                viewBox="0 0 24 24"
-                version="1.2"
-                baseProfile="tiny"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                    d="M14.414 5.586c-.78-.781-2.048-.781-2.828 0l-6.415 6.414 6.415 6.414c.39.391.902.586 1.414.586s1.024-.195 1.414-.586c.781-.781.781-2.047 0-2.828l-3.585-3.586 3.585-3.586c.781-.781.781-2.047 0-2.828z"
-                />
-            </svg>
-        </a>
+      </svg>
+    </a>
 
-        <a class="btn" id="options-btn">
-            <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                version="1.2"
-                baseProfile="tiny"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                    d="M9.387 17.548l.371 1.482c.133.533.692.97 1.242.97h1c.55 0 1.109-.437 1.242-.97l.371-1.482c.133-.533.675-.846 1.203-.694l1.467.42c.529.151 1.188-.114 1.462-.591l.5-.867c.274-.477.177-1.179-.219-1.562l-1.098-1.061c-.396-.383-.396-1.008.001-1.39l1.096-1.061c.396-.382.494-1.084.22-1.561l-.501-.867c-.275-.477-.933-.742-1.461-.591l-1.467.42c-.529.151-1.07-.161-1.204-.694l-.37-1.48c-.133-.532-.692-.969-1.242-.969h-1c-.55 0-1.109.437-1.242.97l-.37 1.48c-.134.533-.675.846-1.204.695l-1.467-.42c-.529-.152-1.188.114-1.462.59l-.5.867c-.274.477-.177 1.179.22 1.562l1.096 1.059c.395.383.395 1.008 0 1.391l-1.098 1.061c-.395.383-.494 1.085-.219 1.562l.501.867c.274.477.933.742 1.462.591l1.467-.42c.528-.153 1.07.16 1.203.693zm2.113-7.048c1.104 0 2 .895 2 2 0 1.104-.896 2-2 2s-2-.896-2-2c0-1.105.896-2 2-2z"
-                />
-            </svg>
-        </a>
+    <a class="btn" id="options-btn">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        version="1.2"
+        baseProfile="tiny"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.387 17.548l.371 1.482c.133.533.692.97 1.242.97h1c.55 0 1.109-.437 1.242-.97l.371-1.482c.133-.533.675-.846 1.203-.694l1.467.42c.529.151 1.188-.114 1.462-.591l.5-.867c.274-.477.177-1.179-.219-1.562l-1.098-1.061c-.396-.383-.396-1.008.001-1.39l1.096-1.061c.396-.382.494-1.084.22-1.561l-.501-.867c-.275-.477-.933-.742-1.461-.591l-1.467.42c-.529.151-1.07-.161-1.204-.694l-.37-1.48c-.133-.532-.692-.969-1.242-.969h-1c-.55 0-1.109.437-1.242.97l-.37 1.48c-.134.533-.675.846-1.204.695l-1.467-.42c-.529-.152-1.188.114-1.462.59l-.5.867c-.274.477-.177 1.179.22 1.562l1.096 1.059c.395.383.395 1.008 0 1.391l-1.098 1.061c-.395.383-.494 1.085-.219 1.562l.501.867c.274.477.933.742 1.462.591l1.467-.42c.528-.153 1.07.16 1.203.693zm2.113-7.048c1.104 0 2 .895 2 2 0 1.104-.896 2-2 2s-2-.896-2-2c0-1.105.896-2 2-2z"
+        />
+      </svg>
+    </a>
 
-        <a class="btn" id="edit-bunch-btn">
-            <svg
-                width="24px"
-                height="24px"
-                viewBox="0 0 24 24"
-                version="1.2"
-                baseProfile="tiny"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                    d="M21.561 5.318l-2.879-2.879c-.293-.293-.677-.439-1.061-.439-.385 0-.768.146-1.061.439l-3.56 3.561h-9c-.552 0-1 .447-1 1v13c0 .553.448 1 1 1h13c.552 0 1-.447 1-1v-9l3.561-3.561c.293-.293.439-.677.439-1.061s-.146-.767-.439-1.06zm-10.061 9.354l-2.172-2.172 6.293-6.293 2.172 2.172-6.293 6.293zm-2.561-1.339l1.756 1.728-1.695-.061-.061-1.667zm7.061 5.667h-11v-11h6l-3.18 3.18c-.293.293-.478.812-.629 1.289-.16.5-.191 1.056-.191 1.47v3.061h3.061c.414 0 1.108-.1 1.571-.29.464-.19.896-.347 1.188-.64l3.18-3.07v6zm2.5-11.328l-2.172-2.172 1.293-1.293 2.171 2.172-1.292 1.293z"
-                />
-            </svg>
-        </a>
+    <a class="btn" id="edit-bunch-btn">
+      <svg
+        width="24px"
+        height="24px"
+        viewBox="0 0 24 24"
+        version="1.2"
+        baseProfile="tiny"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M21.561 5.318l-2.879-2.879c-.293-.293-.677-.439-1.061-.439-.385 0-.768.146-1.061.439l-3.56 3.561h-9c-.552 0-1 .447-1 1v13c0 .553.448 1 1 1h13c.552 0 1-.447 1-1v-9l3.561-3.561c.293-.293.439-.677.439-1.061s-.146-.767-.439-1.06zm-10.061 9.354l-2.172-2.172 6.293-6.293 2.172 2.172-6.293 6.293zm-2.561-1.339l1.756 1.728-1.695-.061-.061-1.667zm7.061 5.667h-11v-11h6l-3.18 3.18c-.293.293-.478.812-.629 1.289-.16.5-.191 1.056-.191 1.47v3.061h3.061c.414 0 1.108-.1 1.571-.29.464-.19.896-.347 1.188-.64l3.18-3.07v6zm2.5-11.328l-2.172-2.172 1.293-1.293 2.171 2.172-1.292 1.293z"
+        />
+      </svg>
+    </a>
 
-        <div class="hide" id="options-menu">
-            <div class="row-container">
-                <label for="ask-flashcard">Flashcard</label>
-                <label class="checkbox-container">
-                    <input
-                        type="radio"
-                        name="questionType"
-                        id="ask-flashcard"
-                    />
-                    <span class="checkmark"></span>
-                </label>
-            </div>
-            <div class="row-container">
-                <label for="ask-typed">Typed</label>
-                <label class="checkbox-container">
-                    <input type="radio" name="questionType" id="ask-typed" />
-                    <span class="checkmark"></span>
-                </label>
-            </div>
-            <div class="row-container">
-                <label for="ask-test">Test</label>
-                <label class="checkbox-container">
-                    <input type="radio" name="questionType" id="ask-test" />
-                    <span class="checkmark"></span>
-                </label>
-            </div>
+    <div class="hide" id="options-menu">
+      <div class="row-container">
+        <label for="ask-flashcard">Flashcard</label>
+        <label class="checkbox-container">
+          <input type="radio" name="questionType" id="ask-flashcard" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="row-container">
+        <label for="ask-typed">Typed</label>
+        <label class="checkbox-container">
+          <input type="radio" name="questionType" id="ask-typed" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="row-container">
+        <label for="ask-test">Test</label>
+        <label class="checkbox-container">
+          <input type="radio" name="questionType" id="ask-test" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
 
-            <div class="separator"></div>
+      <div class="separator"></div>
 
-            <div id="pair-order-flash-typed">
-                <div class="row-container">
-                    <label for="standard">Standard</label>
-                    <label class="checkbox-container">
-                        <input type="radio" name="pairOrder" id="standard" />
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-                <div class="row-container">
-                    <label for="reversed">Reversed</label>
-                    <label class="checkbox-container">
-                        <input type="radio" name="pairOrder" id="reversed" />
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-                <div id="both-flash-typed">
-                    <div class="row-container">
-                        <label for="bothsr">Both (S->R)</label>
-                        <label class="checkbox-container">
-                            <input type="radio" name="pairOrder" id="bothsr" />
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
-                    <div class="row-container">
-                        <label for="bothrs">Both (R->S)</label>
-                        <label class="checkbox-container">
-                            <input type="radio" name="pairOrder" id="bothrs" />
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-
-            <div id="pair-order-test" class="undisplay">
-                <div class="row-container">
-                    <label for="standard-test">Standard</label>
-                    <label class="checkbox-container">
-                        <input
-                            type="radio"
-                            name="pairOrderTest"
-                            id="standard-test"
-                        />
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-                <div class="row-container">
-                    <label for="reversed-test">Reversed</label>
-                    <label class="checkbox-container">
-                        <input
-                            type="radio"
-                            name="pairOrderTest"
-                            id="reversed-test"
-                        />
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-                <div class="row-container">
-                    <label for="both-test">Both</label>
-                    <label class="checkbox-container">
-                        <input
-                            type="radio"
-                            name="pairOrderTest"
-                            id="both-test"
-                        />
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-            </div>
-
-            <div id="say-options">
-                <div class="separator"></div>
-                <div class="row-container">
-                    <label for="say-prompt">Say Prompt</label>
-                    <label class="checkbox-container">
-                        <input type="checkbox" id="say-prompt" />
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-                <div class="row-container">
-                    <label for="say-answer">Say Answer</label>
-                    <label class="checkbox-container">
-                        <input type="checkbox" id="say-answer" />
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-            </div>
-
-            <div id="format-options">
-                <div class="separator"></div>
-                <div class="row-container">
-                    <label for="hide-para-text">Hide prompt ()</label>
-                    <label class="checkbox-container">
-                        <input type="checkbox" id="hide-para-text" />
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-                <div class="undisplay" id="pinyin-option-section">
-                    <div class="separator"></div>
-                    <div class="row-container">
-                        <label for="show-pinyin">Show pinyin</label>
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="show-pinyin" />
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-
-            <div id="test-config-options" class="undisplay">
-                <div class="separator"></div>
-                <div class="row-container">
-                    <label for="MC-test-toggle">Multi Choice</label>
-                    <label class="checkbox-container">
-                        <input
-                            type="checkbox"
-                            id="MC-test-toggle"
-                            class="test-toggle"
-                        />
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-                <div class="row-container">
-                    <label for="typed-test-toggle">Typed</label>
-                    <label class="checkbox-container">
-                        <input
-                            type="checkbox"
-                            id="typed-test-toggle"
-                            class="test-toggle"
-                        />
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-                <div class="row-container">
-                    <label for="TF-test-toggle">True/False</label>
-                    <label class="checkbox-container">
-                        <input
-                            type="checkbox"
-                            id="TF-test-toggle"
-                            class="test-toggle"
-                        />
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-                <div class="separator"></div>
-                <div class="row-container">
-                    <label for="num-test-questions">Test Length</label>
-                    <input type="text" id="num-test-questions" />
-                </div>
-            </div>
+      <div id="pair-order-flash-typed">
+        <div class="row-container">
+          <label for="standard">Standard</label>
+          <label class="checkbox-container">
+            <input type="radio" name="pairOrder" id="standard" />
+            <span class="checkmark"></span>
+          </label>
         </div>
+        <div class="row-container">
+          <label for="reversed">Reversed</label>
+          <label class="checkbox-container">
+            <input type="radio" name="pairOrder" id="reversed" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div id="both-flash-typed">
+          <div class="row-container">
+            <label for="bothsr">Both (S->R)</label>
+            <label class="checkbox-container">
+              <input type="radio" name="pairOrder" id="bothsr" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="row-container">
+            <label for="bothrs">Both (R->S)</label>
+            <label class="checkbox-container">
+              <input type="radio" name="pairOrder" id="bothrs" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
 
-        <div class="container flashcard-main-container" id="main-container">
-            <h2 id="prompt"></h2>
-            <div class="hide" id="main-separator"></div>
-            <h2 class="hide" id="answer"></h2>
+      <div id="pair-order-test" class="undisplay">
+        <div class="row-container">
+          <label for="standard-test">Standard</label>
+          <label class="checkbox-container">
+            <input type="radio" name="pairOrderTest" id="standard-test" />
+            <span class="checkmark"></span>
+          </label>
         </div>
-        <div id="bottom-container-container" class="undisplay">
-            <div id="bottom-container">
-                <p id="remaining-text"></p>
-                <p id="bottom-text"></p>
-            </div>
+        <div class="row-container">
+          <label for="reversed-test">Reversed</label>
+          <label class="checkbox-container">
+            <input type="radio" name="pairOrderTest" id="reversed-test" />
+            <span class="checkmark"></span>
+          </label>
         </div>
-        <script src="js/pinyin_dict_withtone.js"></script>
-        <script src="js/pinyinUtil.js"></script>
-        <script src="js/flashcard.js"></script>
-        <script src="js/themeManager.js"></script>
-        <!-- <script src="js/fade.js"></script> -->
-    </body>
+        <div class="row-container">
+          <label for="both-test">Both</label>
+          <label class="checkbox-container">
+            <input type="radio" name="pairOrderTest" id="both-test" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+
+      <div id="say-options">
+        <div class="separator"></div>
+        <div class="row-container">
+          <label for="say-prompt">Say Prompt</label>
+          <label class="checkbox-container">
+            <input type="checkbox" id="say-prompt" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="row-container">
+          <label for="say-answer">Say Answer</label>
+          <label class="checkbox-container">
+            <input type="checkbox" id="say-answer" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+
+      <div id="format-options">
+        <div class="separator"></div>
+        <div class="row-container">
+          <label for="hide-para-text">Hide prompt ()</label>
+          <label class="checkbox-container">
+            <input type="checkbox" id="hide-para-text" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="undisplay" id="pinyin-option-section">
+          <div class="separator"></div>
+          <div class="row-container">
+            <label for="show-pinyin">Show pinyin</label>
+            <label class="checkbox-container">
+              <input type="checkbox" id="show-pinyin" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div id="test-config-options" class="undisplay">
+        <div class="separator"></div>
+        <div class="row-container">
+          <label for="MC-test-toggle">Multi Choice</label>
+          <label class="checkbox-container">
+            <input type="checkbox" id="MC-test-toggle" class="test-toggle" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="row-container">
+          <label for="typed-test-toggle">Typed</label>
+          <label class="checkbox-container">
+            <input type="checkbox" id="typed-test-toggle" class="test-toggle" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="row-container">
+          <label for="TF-test-toggle">True/False</label>
+          <label class="checkbox-container">
+            <input type="checkbox" id="TF-test-toggle" class="test-toggle" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="separator"></div>
+        <div class="row-container">
+          <label for="num-test-questions">Test Length</label>
+          <input type="text" id="num-test-questions" />
+        </div>
+      </div>
+    </div>
+
+    <div class="hide search-input-bar" id="search-input-bar">
+      <div id="search-bar-items">
+        <input
+          class="preload search-input"
+          type="text"
+          id="search-input"
+          placeholder="Search..."
+        />
+        <button id="prev-match" class="match-btn">
+          <svg
+            width="24px"
+            height="24px"
+            viewBox="0 0 24 24"
+            version="1.2"
+            baseProfile="tiny"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 3.172l-6.414 6.414c-.781.781-.781 2.047 0 2.828s2.047.781 2.828 0l1.586-1.586v7.242c0 1.104.895 2 2 2 1.104 0 2-.896 2-2v-7.242l1.586 1.586c.391.391.902.586 1.414.586s1.023-.195 1.414-.586c.781-.781.781-2.047 0-2.828l-6.414-6.414z"
+            />
+          </svg>
+        </button>
+        <button id="next-match" class="match-btn">
+          <svg
+            width="24px"
+            height="24px"
+            viewBox="0 0 24 24"
+            version="1.2"
+            baseProfile="tiny"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.414 10.656c-.781-.781-2.047-.781-2.828 0l-1.586 1.586v-7.242c0-1.105-.896-2-2-2-1.105 0-2 .895-2 2v7.242l-1.586-1.586c-.781-.781-2.047-.781-2.828 0s-.781 2.047 0 2.828l6.414 6.414 6.414-6.414c.781-.781.781-2.046 0-2.828z"
+            />
+          </svg>
+        </button>
+        <span id="match-count" class="match-count">0 matches</span>
+      </div>
+      <button id="close-button" class="close-button">
+        <svg
+          width="24px"
+          height="24px"
+          viewBox="0 0 24 24"
+          version="1.2"
+          baseProfile="tiny"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17.414 6.586c-.78-.781-2.048-.781-2.828 0l-2.586 2.586-2.586-2.586c-.78-.781-2.048-.781-2.828 0-.781.781-.781 2.047 0 2.828l2.585 2.586-2.585 2.586c-.781.781-.781 2.047 0 2.828.39.391.902.586 1.414.586s1.024-.195 1.414-.586l2.586-2.586 2.586 2.586c.39.391.902.586 1.414.586s1.024-.195 1.414-.586c.781-.781.781-2.047 0-2.828l-2.585-2.586 2.585-2.586c.781-.781.781-2.047 0-2.828z"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <div class="container flashcard-main-container" id="main-container">
+      <h2 id="prompt"></h2>
+      <div class="hide" id="main-separator"></div>
+      <h2 class="hide" id="answer"></h2>
+    </div>
+    <div id="bottom-container-container" class="undisplay">
+      <div id="bottom-container">
+        <p id="remaining-text"></p>
+        <p id="bottom-text"></p>
+      </div>
+    </div>
+
+    <script src="js/pinyin_dict_withtone.js"></script>
+    <script src="js/pinyinUtil.js"></script>
+    <script src="js/flashcard.js"></script>
+    <script src="js/themeManager.js"></script>
+    <script src="js/find.js"></script>
+    <!-- <script src="js/fade.js"></script> -->
+  </body>
 </html>
